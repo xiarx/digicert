@@ -15,7 +15,6 @@ const config = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'dist',
     clean: true,
   },
   plugins: [
@@ -56,10 +55,9 @@ const config = {
 
 if (!isProduction) {
   config.devServer = {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
+    host: 'localhost',
     port: 4000,
+    open: true,
     hot: true,
     historyApiFallback: true,
   }

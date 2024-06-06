@@ -1,12 +1,16 @@
 import React from 'react'
+import {QueryClientProvider, QueryClient} from '@tanstack/react-query'
+import {RouterProvider} from 'react-router-dom'
 
 import type {FC} from 'react'
 
-import Router from '@app/router'
+import router from '@app/router'
 
 const App: FC = () => {
   return <React.StrictMode>
-    <Router />
+    <QueryClientProvider client={new QueryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 }
 
