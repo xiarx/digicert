@@ -1,7 +1,13 @@
 import React from 'react'
 
-const App = () => {
-  return <div>App</div>
+import type {FC} from 'react'
+
+import Router from '@app/router'
+
+const App: FC = () => {
+  return <React.StrictMode>
+    <Router />
+  </React.StrictMode>
 }
 
 export default App

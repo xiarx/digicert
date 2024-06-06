@@ -15,12 +15,15 @@ const config = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: 'dist',
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
   ],
+  target: 'web',
   module: {
     rules: [
       {
@@ -46,6 +49,7 @@ const config = {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
     alias: {
       '@app': path.resolve(__dirname, 'src'),
+      '@routes': path.resolve(__dirname, 'src/routes'),
     },
   },
 }
@@ -56,6 +60,8 @@ if (!isProduction) {
       directory: path.join(__dirname, 'dist'),
     },
     port: 4000,
+    hot: true,
+    historyApiFallback: true,
   }
 }
 
