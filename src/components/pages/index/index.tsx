@@ -5,12 +5,12 @@ import type {FC} from 'react'
 
 import './style'
 
-const Carousel: FC = (): JSX.Element => {
+const Index: FC = (): JSX.Element => {
   return <Box
-    id='carousel'
+    id='index'
   >
     
   </Box>
 }
 
-export default Carousel
+export default Index

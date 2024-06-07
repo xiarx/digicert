@@ -6,6 +6,9 @@ import type {FC} from 'react'
 
 import router from '@app/router'
 
+import 'normalize.css'
+import './theme'
+
 const App: FC = () => {
   return <React.StrictMode>
     <QueryClientProvider client={new QueryClient}>

@@ -20,6 +20,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
+      favicon: path.join(__dirname, 'src/assets/images/favicon.ico'),
     }),
   ],
   target: 'web',
@@ -39,16 +40,20 @@ const config = {
         use: [stylesHandler, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|ico)$/i,
         type: 'asset',
       },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '...'],
     alias: {
       '@app': path.resolve(__dirname, 'src'),
+      '@data': path.resolve(__dirname, 'src/data'),
+      '@api': path.resolve(__dirname, 'src/api'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@routes': path.resolve(__dirname, 'src/routes'),
+      '@components': path.resolve(__dirname, 'src/components'),
     },
   },
 }
