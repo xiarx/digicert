@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 
 import type { FC } from "react";
 
+import AuthProvider from "@context/auth";
 import router from "@app/router";
 
 import "normalize.css";
@@ -13,7 +14,9 @@ const App: FC = () => {
   return (
     <React.StrictMode>
       <QueryClientProvider client={new QueryClient()}>
-        <RouterProvider router={router} />
+        <AuthProvider>
+          <RouterProvider router={router} />
+        </AuthProvider>
       </QueryClientProvider>
     </React.StrictMode>
   );

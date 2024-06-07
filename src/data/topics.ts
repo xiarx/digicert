@@ -6,9 +6,9 @@ export interface GetTopicsResponse {
   title: string;
 }
 
-export const getTopics = () =>
+export const getTopics = (token: string) =>
   axios.get("https://api.unsplash.com/topics", {
     headers: {
-      Authorization: 'Client-ID lYLE389mSuDNH7qBop4vu8-QZq1IRZdynK3sdOEHSfw',
+      Authorization: `Client-ID ${token}`,
     },
   });
