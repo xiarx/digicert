@@ -1,16 +1,16 @@
-import React from 'react'
-import {createBrowserRouter} from 'react-router-dom'
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
 
-import Index from '@routes/index'
-import Movies from '@routes/movies'
-import Carousel from '@routes/carousel'
-import Error from '@routes/error'
+import Index from "@routes/index";
+import Movies from "@routes/movies";
+import Carousel from "@routes/carousel";
+import Error from "@routes/error";
 
 export enum Path {
-  INDEX = '/',
-  MOVIES = '/movies',
-  CAROUSEL = '/carousel',
-  ERROR = '/error',
+  INDEX = "/",
+  MOVIES = "/movies",
+  CAROUSEL = "/carousel",
+  ERROR = "/error",
 }
 
 const router = createBrowserRouter([
@@ -27,9 +27,9 @@ const router = createBrowserRouter([
     element: <Carousel />,
   },
   {
-    path: '*',
+    path: "*",
     element: <Error />,
   },
-])
+]);
 
-export default router
+export default router;

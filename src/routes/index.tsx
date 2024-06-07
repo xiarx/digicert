@@ -1,15 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import type {FC} from 'react'
-import type {RouteProps} from 'react-router-dom'
+import type { FC } from "react";
+import type { RouteProps } from "react-router-dom";
 
-import PageComponent from '@components/layout/page'
-import IndexComponent from '@components/pages/index'
+import PageComponent from "@components/layout/page";
+import IndexComponent from "@components/pages/index";
 
 const Index: FC<RouteProps> = (): JSX.Element => {
-  return <PageComponent>
-    <IndexComponent />
-  </PageComponent>
-}
+  return (
+    <PageComponent>
+      <IndexComponent />
+    </PageComponent>
+  );
+};
 
-export default Index
+export default Index;

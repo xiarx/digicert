@@ -8,15 +8,19 @@
   height: 100vh;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.1s linear, opacity 0.1s linear;
+  transition:
+    visibility 0.1s linear,
+    opacity 0.1s linear;
 
   &.visible {
     display: flex;
     visibility: visible;
     opacity: 1;
     background: rgba(40, 40, 40, 0.8);
-    transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
-  
+    transition:
+      visibility 0.3s ease-in,
+      opacity 0.3s ease-in;
+
     #movie-container {
       visibility: visible;
     }

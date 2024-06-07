@@ -1,80 +1,80 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-import path from 'path'
-import {fileURLToPath} from 'url'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import WorkboxWebpackPlugin from 'workbox-webpack-plugin'
+import path from "path";
+import { fileURLToPath } from "url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import WorkboxWebpackPlugin from "workbox-webpack-plugin";
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const isProduction = process.env.NODE_ENV == 'production'
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const isProduction = process.env.NODE_ENV == "production";
 
-const stylesHandler = 'style-loader'
+const stylesHandler = "style-loader";
 
 const config = {
-  entry: './src/index.tsx',
+  entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
-      favicon: path.join(__dirname, 'src/assets/images/favicon.ico'),
+      template: "index.html",
+      favicon: path.join(__dirname, "src/assets/images/favicon.ico"),
     }),
   ],
-  target: 'web',
+  target: "web",
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/i,
-        loader: 'ts-loader',
-        exclude: ['/node_modules/'],
+        loader: "ts-loader",
+        exclude: ["/node_modules/"],
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, 'css-loader'],
+        use: [stylesHandler, "css-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, 'css-loader', 'sass-loader'],
+        use: [stylesHandler, "css-loader", "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|ico)$/i,
-        type: 'asset',
+        type: "asset",
       },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '...'],
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".scss", "..."],
     alias: {
-      '@app': path.resolve(__dirname, 'src'),
-      '@data': path.resolve(__dirname, 'src/data'),
-      '@api': path.resolve(__dirname, 'src/api'),
-      '@hooks': path.resolve(__dirname, 'src/hooks'),
-      '@routes': path.resolve(__dirname, 'src/routes'),
-      '@components': path.resolve(__dirname, 'src/components'),
+      "@app": path.resolve(__dirname, "src"),
+      "@data": path.resolve(__dirname, "src/data"),
+      "@api": path.resolve(__dirname, "src/api"),
+      "@hooks": path.resolve(__dirname, "src/hooks"),
+      "@routes": path.resolve(__dirname, "src/routes"),
+      "@components": path.resolve(__dirname, "src/components"),
     },
   },
-}
+};
 
 if (!isProduction) {
   config.devServer = {
-    host: 'localhost',
+    host: "localhost",
     port: 4000,
     open: true,
     hot: true,
     historyApiFallback: true,
-  }
+  };
 }
 
 export default () => {
   if (isProduction) {
-    config.mode = 'production';
+    config.mode = "production";
 
     config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
   } else {
-    config.mode = 'development';
+    config.mode = "development";
   }
   return config;
-}
+};

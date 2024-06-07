@@ -1,16 +1,12 @@
-import React from 'react'
-import {Box} from '@mui/material'
+import React from "react";
+import { Box } from "@mui/material";
 
-import type {FC} from 'react'
+import type { FC } from "react";
 
-import './style'
+import "./style";
 
 const Carousel: FC = (): JSX.Element => {
-  return <Box
-    id='carousel'
-  >
-    
-  </Box>
-}
+  return <Box id="carousel"></Box>;
+};
 
-export default Carousel
+export default Carousel;
