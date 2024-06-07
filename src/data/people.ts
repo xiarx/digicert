@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export interface getPersonResponse {
+export interface GetPersonResponse {
   name: string;
   height: number;
   mass: number;

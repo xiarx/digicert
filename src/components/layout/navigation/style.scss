@@ -1,14 +1,15 @@
 #navigation {
+  z-index: 2;
   background: var(--color-foreground);
-  box-shadow: 0 3px 4px 0 #808080;
+  border-bottom: 2px solid #c0c0c0;
+  box-shadow: 0 3px 4px 1px #808080;
 
   a {
     display: inline-block;
     padding: 20px;
     color: #ffffff;
     transition:
-      background-color 0.2s ease-in,
-      box-shadow 0.2s;
+      background-color 0.2s ease-in;
 
     &:hover,
     &.active {

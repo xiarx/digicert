@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 
 import type { FC } from "react";
 
@@ -45,7 +45,10 @@ const Movie: FC<Props> = (props): JSX.Element => {
       className={props.visible ? "visible" : undefined}
       onClick={(event) => props.onClose()}
     >
-      <Box id="movie-container">
+      <Box
+        id="movie-container"
+        onClick={(event) => event.stopPropagation()}
+      >
         <div className="header">
           <Typography variant="h4" style={{ color: "white" }}>
             {props.data.title}
@@ -90,6 +93,13 @@ const Movie: FC<Props> = (props): JSX.Element => {
             )}
           </div>
         </div>
+        <Button
+          color='inherit'
+          variant='outlined'
+          onClick={() => props.onClose()}
+        >
+          X
+        </Button>
       </Box>
     </Box>
   );
