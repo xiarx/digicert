@@ -1,16 +1,12 @@
-import React from 'react'
-import {Box} from '@mui/material'
+import React from "react";
+import { Box } from "@mui/material";
 
-import type {FC} from 'react'
+import type { FC } from "react";
 
-import './style'
+import "./style";
 
 const Error: FC = (): JSX.Element => {
-  return <Box
-    id='error'
-  >
-    
-  </Box>
-}
+  return <Box id="error"></Box>;
+};
 
-export default Error
+export default Error;
