@@ -16,7 +16,7 @@ interface Props {
 
 const AuthProvider: FC<Props> = ({ children }: Props) => {
   const value = {
-    token: JSON.parse(localStorage.getItem("token")),
+    token: process.env.AUTH_TOKEN,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -66,8 +66,8 @@ const config = {
 
 if (!isProduction) {
   config.devServer = {
-    host: "localhost",
-    port: 4000,
+    host: "0.0.0.0",
+    port: process.env.PORT,
     open: true,
     hot: true,
     historyApiFallback: true,
