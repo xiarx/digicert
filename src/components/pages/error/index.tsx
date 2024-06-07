@@ -1,11 +1,16 @@
 import React from 'react'
+import {Box} from '@mui/material'
 
 import type {FC} from 'react'
 
 import './style'
 
-const Index: FC = (): JSX.Element => {
-  return <div id='index'></div>
+const Error: FC = (): JSX.Element => {
+  return <Box
+    id='error'
+  >
+    
+  </Box>
 }
 
-export default Index
+export default Error

@@ -1,8 +1,6 @@
 import React from 'react'
 import {createBrowserRouter} from 'react-router-dom'
 
-import type {FC} from 'react'
-
 import Index from '@routes/index'
 import Movies from '@routes/movies'
 import Carousel from '@routes/carousel'

@@ -10,7 +10,11 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["src/*"],
-      "@routes/*": ["src/routes/*"]
+      "@data/*": ["src/data/*"],
+      "@api/*": ["src/api/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@routes/*": ["src/routes/*"],
+      "@components/*": ["src/components/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]

@@ -1,0 +1,18 @@
+#navigation {
+  background: var(--color-foreground);
+  box-shadow: 0 3px 4px 0 #808080;
+
+  a {
+    display: inline-block;
+    padding: 20px;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in, box-shadow 0.2s;
+
+    &:hover,
+    &.active {
+      background: #f8f0ff;
+      color: #706080;
+      box-shadow: inset 0 3px 2px 0 #808080;
+    }
+  }
+}
