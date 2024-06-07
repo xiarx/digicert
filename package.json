@@ -27,7 +27,8 @@
     "dev": "webpack serve --mode=development",
     "test": "test",
     "style": "prettier . --write -u",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "docker": "docker build -t digimoca . && docker run -p 8080:80 digimoca"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
