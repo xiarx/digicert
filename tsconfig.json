@@ -10,12 +10,14 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["src/*"],
+      "@context/*": ["src/context/*"],
       "@data/*": ["src/data/*"],
       "@api/*": ["src/api/*"],
       "@hooks/*": ["src/hooks/*"],
       "@routes/*": ["src/routes/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types.d.ts"]
 }

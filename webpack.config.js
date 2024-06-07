@@ -1,9 +1,10 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 import path from "path";
 import { fileURLToPath } from "url";
+import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import WorkboxWebpackPlugin from "workbox-webpack-plugin";
+
+import "dotenv/config";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,6 +22,9 @@ const config = {
     new HtmlWebpackPlugin({
       template: "index.html",
       favicon: path.join(__dirname, "src/assets/images/favicon.ico"),
+    }),
+    new webpack.DefinePlugin({
+      "process.env.AUTH_TOKEN": JSON.stringify(process.env.AUTH_TOKEN),
     }),
   ],
   target: "web",
@@ -49,11 +53,13 @@ const config = {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".scss", "..."],
     alias: {
       "@app": path.resolve(__dirname, "src"),
+      "@context": path.resolve(__dirname, "src/context"),
       "@data": path.resolve(__dirname, "src/data"),
       "@api": path.resolve(__dirname, "src/api"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@routes": path.resolve(__dirname, "src/routes"),
       "@components": path.resolve(__dirname, "src/components"),
+      "@assets": path.resolve(__dirname, "src/assets"),
     },
   },
 };

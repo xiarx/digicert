@@ -2,14 +2,13 @@
   z-index: 2;
   background: var(--color-foreground);
   border-bottom: 2px solid #c0c0c0;
-  box-shadow: 0 3px 4px 1px #808080;
+  box-shadow: 0 2px 4px 1px #404040;
 
   a {
     display: inline-block;
     padding: 20px;
     color: #ffffff;
-    transition:
-      background-color 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
 
     &:hover,
     &.active {
