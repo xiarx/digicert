@@ -23,6 +23,8 @@ OR
 - `npm install`
 - `npm run dev` (webpack dev server)
 
+> It will listen on localhost:4000
+
 ### Docker
 
 - `npm run docker` (requires docker to be installed)
@@ -31,7 +33,9 @@ OR
 
 - `docker build -t digimoca . && docker run -p 8080:80 digimoca` (if you don't have node installed and just want to run the project)
 
-> Docker will create a production build and serve it through nginx.  
+> Docker will create a production build and serve it through nginx.  It will listen on localhost:8080.  
+
+> Both webpack and docker will serve using http, if your browser is forced to https it will reject the requests.  
 
 ## Project Structure
 
