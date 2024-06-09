@@ -25,6 +25,8 @@ const config = {
     }),
     new webpack.DefinePlugin({
       "process.env.AUTH_TOKEN": JSON.stringify(process.env.AUTH_TOKEN),
+      "process.env.SWAPI_URI": JSON.stringify(process.env.SWAPI_URI),
+      "process.env.UNSPLASH_URI": JSON.stringify(process.env.UNSPLASH_URI),
     }),
   ],
   target: "web",

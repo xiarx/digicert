@@ -7,7 +7,7 @@ export interface GetTopicsResponse {
 }
 
 export const getTopics = (token: string) =>
-  axios.get("https://api.unsplash.com/topics", {
+  axios.get(`${process.env.UNSPLASH_URI}/topics`, {
     headers: {
       Authorization: `Client-ID ${token}`,
     },

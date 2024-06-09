@@ -11,7 +11,7 @@ export interface GetImagesByTopicResponse {
 }
 
 export const getImagesByTopic = (token: string, topic: string) =>
-  axios.get(`https://api.unsplash.com/topics/${topic}/photos`, {
+  axios.get(`${process.env.UNSPLASH_URI}/topics/${topic}/photos`, {
     headers: {
       Authorization: `Client-ID ${token}`,
     },
