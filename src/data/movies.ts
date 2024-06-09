@@ -22,4 +22,4 @@ export interface GetMoviesResponse {
   }[];
 }
 
-export const getMovies = () => axios.get("https://swapi.dev/api/films");
+export const getMovies = () => axios.get(`${process.env.SWAPI_URI}/api/films`);

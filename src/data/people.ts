@@ -20,4 +20,4 @@ export interface GetPersonResponse {
 }
 
 export const getPerson = (id: number) =>
-  axios.get("https://swapi.dev/api/people/" + id);
+  axios.get(`${process.env.SWAPI_URI}/api/people/${id}`);
